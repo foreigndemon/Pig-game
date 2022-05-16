@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-color:#D3E4CD;
+    --game-zone-border:#99A799;
+    --player-heading:#525E75;
+}
+body{
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+
+.game-zone{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 6rem auto 6rem auto;
+    justify-items: center;
+    border-radius: 15px;
+    height: 30rem;
+    width: 50rem;
+
+    box-shadow: inset 5px 5px 10px #b3c2ae,
+            inset -5px -5px 10px #f3ffec;
+}
+
+.game-menu{
+    position: absolute;
+    top:12rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.game-menu-btn{
+    padding: 1.4rem 4rem;
+    background-color: var(--player-heading);
+    text-transform: uppercase;
+    color: #eee;
+    margin: 1rem;
+    border-radius: 10px;
+    height: 2rem;
+    width: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:  5px 5px 10px #b1c0ac,
+    -5px -5px 10px #f5ffee;
+}
+
+.game-menu-btn:active{
+    transform: scale(0.95);
+}
+
+.game-menu-dice{
+    height: 4rem;
+    /* opacity: 0; */
+    border-radius: 10px;
+    box-shadow:  5px 5px 10px #b1c0ac,
+    -5px -5px 10px #f5ffee;
+}
+
+.player{
+    font-family: 'Koulen', cursive;
+    padding: 2.5rem;
+    color: var(--player-heading);
+
+    display: flex;
+    justify-content:space-around;
+}
+
+.user,
+.cpu{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.user{
+    text-align: center;
+    border-right: 2px solid var(--game-zone-border);
+    width: 100%;
+}
+
+.user-score-val,
+.cpu-score-val{
+    font-size: 2rem;
+}
+
+.cpu{
+    text-align: center;
+    width: 100%;
+}
+
+.score{
+    height: 4rem;
+    width: 10rem;
+    /* border: 2px solid var(--game-zone-border); */
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow:  5px 5px 10px #b1c0ac,
+             -5px -5px 10px #f5ffee;
+}
+
+.current-score{
+    height: 7rem;
+    width: 10rem;
+    /* border: 2px solid var(--game-zone-border); */
+    border-radius: 10px;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:  5px 5px 10px #b1c0ac,
+    -5px -5px 10px #f5ffee;
+}
+
+.current-score-head{
+    font-size: 1.2rem;
+}
+
+.current-score-val{
+    font-size: 2rem;
+}

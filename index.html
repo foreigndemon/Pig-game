@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="game-zone">
+            <div class="player user">
+                <div>
+                    <h1>Player</h1>
+                    <div id="user-score" class="score">
+                        <span class="user-score-val">0</span>
+                    </div>
+                </div>
+                <div class="current-score">
+                    <h6 class="current-score-head">Current</h6>
+                    <h3 class="current-score-val">0</h2>
+                </div>
+            </div>
+
+            <div class="game-menu">
+               <button class="btn game-menu-btn">New game</button>
+               <img class="game-menu-dice" src="./assets/dice-1.png"></img>
+               <button class="btn game-menu-btn">Roll Dice</button>
+               <button class="btn game-menu-btn">Hold</button> 
+            </div>
+
+            <div class="player cpu">
+                <div>
+                    <h1>CPU</h1>
+                    <div id="cpu-score" class="score">
+                        <span class="cpu-score-val">0</span>
+                    </div>
+                </div>
+                <div class="current-score">
+                    <h6 class="current-score-head">Current</h6>
+                    <h3 class="current-score-val">0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
