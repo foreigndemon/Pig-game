@@ -25,7 +25,8 @@ rollDice.addEventListener('click',()=>{
 })
 
 scoreHold.addEventListener('click',()=>{
-
+    scores[activePlayer] += currentScore;
+    document.getElementById(`score-player-${activePlayer}`)
 })
 
 function playerTurn(diceNumber){

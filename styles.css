@@ -21,6 +21,12 @@ body{
     display: none;
 }
 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .game-zone{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -36,12 +42,12 @@ body{
 
 .game-menu{
     position: absolute;
-    top:15rem;
+    top:15.5rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .btn{
