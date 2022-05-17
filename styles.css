@@ -6,21 +6,25 @@
     padding: 0;
 }
 
-:root{
+:root{  
     --bg-color:#D3E4CD;
     --game-zone-border:#99A799;
     --player-heading:#525E75;
 }
+
 body{
     background-color: var(--bg-color);
     overflow: hidden;
 }
 
+.hidden{
+    display: none;
+}
 
 .game-zone{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin: 6rem auto 6rem auto;
+    margin: 10rem auto 0 auto;
     justify-items: center;
     border-radius: 15px;
     height: 30rem;
@@ -32,7 +36,7 @@ body{
 
 .game-menu{
     position: absolute;
-    top:12rem;
+    top:15rem;
 
     display: flex;
     flex-direction: column;
@@ -63,6 +67,7 @@ body{
 
     box-shadow:  5px 5px 10px #b1c0ac,
     -5px -5px 10px #f5ffee;
+    white-space: nowrap;
 }
 
 .game-menu-btn:active{
@@ -71,7 +76,6 @@ body{
 
 .game-menu-dice{
     height: 4rem;
-    /* opacity: 0; */
     border-radius: 10px;
     box-shadow:  5px 5px 10px #b1c0ac,
     -5px -5px 10px #f5ffee;
@@ -86,6 +90,10 @@ body{
     justify-content:space-around;
 }
 
+.player-active{
+    transform: scale(1.5);
+}
+
 .user,
 .cpu{
     display: flex;
@@ -95,7 +103,9 @@ body{
 
 .user{
     text-align: center;
-    border-right: 2px solid var(--game-zone-border);
+    border-right: 2px dashed var(--game-zone-border);
+    border-spacing: 1rem;
+    border-color: var(--player-heading);
     width: 100%;
 }
 
@@ -112,7 +122,6 @@ body{
 .score{
     height: 4rem;
     width: 10rem;
-    /* border: 2px solid var(--game-zone-border); */
     border-radius: 10px;
     margin-top: 1.5rem;
     box-shadow:  5px 5px 10px #b1c0ac,
@@ -122,7 +131,6 @@ body{
 .current-score{
     height: 7rem;
     width: 10rem;
-    /* border: 2px solid var(--game-zone-border); */
     border-radius: 10px;
     margin-top: 2rem;
 
