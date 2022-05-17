@@ -95,10 +95,22 @@ body{
 
     display: flex;
     justify-content:space-around;
+    align-items: center;
 }
 
 .player-active{
     transform: scale(1.5);
+}
+
+.player-active-win{
+    transform: scale(1.2);
+}
+
+.player-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .user,
@@ -118,6 +130,7 @@ body{
 
 .user-score-val,
 .cpu-score-val{
+
     font-size: 2rem;
 }
 

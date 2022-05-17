@@ -3,8 +3,8 @@ const scoreCPU = document.querySelector('.cpu-score-val');
 const rollDice = document.getElementById('roll-dice-btn');
 const diceImage = document.querySelector('.game-menu-dice');
 const scoreHold = document.getElementById('score-hold')
-const playerHead = document.getElementById('player-heading');
-const cpuHead = document.getElementById('cpu-heading');
+const playerHead = document.getElementById('player-heading-0');
+const cpuHead = document.getElementById('player-heading-1');
 const gameReset = document.getElementById('game-reset');
 
 const playerCurrentScore = document.getElementById('current-score-0');
@@ -47,9 +47,13 @@ rollDice.addEventListener('click',()=>{
 
 scoreHold.addEventListener('click',()=>{
     scores[activePlayer] += currentScore;
-    document.getElementById(`score-player-${activePlayer}`).innerText = scores[activePlayer];
-    if(scores[activePlayer] >= 10){
+    document.getElementById(`score-player-${activePlayer}`).textContent = scores[activePlayer];
+    if(scores[activePlayer] >= 50){
         renderConfetti();
+        document.getElementById(`player-heading-${activePlayer}`).classList.add('player-active-win');
+        document.getElementById(`player-heading-${activePlayer}`).innerText += ` won! 🎉`;
+        }else{
+        switchActivePlayer();
     }
 })
 
@@ -62,7 +66,9 @@ gameReset.addEventListener('click',()=>{
     cpuCurrentScore.innerText = 0;
     document.querySelector('#score-player-0').innerText = 0;
     document.querySelector('#score-player-1').innerHTML = 0;
-
+    document.getElementById('player-heading-0').innerText = 'Player';
+    document.getElementById('player-heading-1').innerText = 'CPU'
+    diceImage.classList.add('hidden');
     clearConfetti();
 })
 
