@@ -9,6 +9,9 @@
 </head>
 
 <body>
+
+
+
     <div class="container">
         <div class="game-zone">
             <div class="player user" id="player-0">
@@ -25,7 +28,7 @@
             </div>
 
             <div class="game-menu">
-               <button class="btn game-menu-btn">New game</button>
+               <button class="btn game-menu-btn" id="game-reset">New game</button>
                <img class="game-menu-dice hidden" src="./assets/dice-1.png"></img>
                <button class="btn game-menu-btn" id="roll-dice-btn">Roll Dice</button>
                <button class="btn game-menu-btn" id="score-hold">Hold</button> 
@@ -44,8 +47,10 @@
                 </div>
             </div>
         </div>
+        <canvas id="my-canvas"></canvas>
     </div>
-
-    <script src="./script.js"></script>
+    <script src="./scripts/confetti.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./main.js"></script>
 </body>
 </html>

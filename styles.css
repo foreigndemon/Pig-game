@@ -157,3 +157,8 @@ body{
 .current-score-val{
     font-size: 2rem;
 }
+
+#my-canvas{
+    position: absolute;
+    z-index: -1;
+}
