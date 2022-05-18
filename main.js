@@ -12,6 +12,8 @@ const cpuCurrentScore = document.getElementById('current-score-1');
 const player = document.getElementById('player-0');
 const cpu = document.getElementById('player-1');
 
+const applaudSound = new Audio('assets/applaud-sound.wav');
+
 // score counts
 let scores = [0,0];
 let currentScore = 0;
@@ -37,6 +39,10 @@ function switchActivePlayer(){
     cpuHead.classList.toggle('player-active');
 }
 
+function applaud(){
+    applaudSound.play();
+}
+
 // rolling the dice
 rollDice.addEventListener('click',()=>{
     diceImage.classList.remove('hidden');
@@ -48,8 +54,9 @@ rollDice.addEventListener('click',()=>{
 scoreHold.addEventListener('click',()=>{
     scores[activePlayer] += currentScore;
     document.getElementById(`score-player-${activePlayer}`).textContent = scores[activePlayer];
-    if(scores[activePlayer] >= 100){
+    if(scores[activePlayer] >= 10){
         renderConfetti();
+        applaud();
         document.getElementById(`player-heading-${activePlayer}`).classList.add('player-active-win');
         document.getElementById(`player-heading-${activePlayer}`).innerText += ` won! 🎉`;
         }else{
