@@ -54,7 +54,7 @@ rollDice.addEventListener('click',()=>{
 scoreHold.addEventListener('click',()=>{
     scores[activePlayer] += currentScore;
     document.getElementById(`score-player-${activePlayer}`).textContent = scores[activePlayer];
-    if(scores[activePlayer] >= 10){
+    if(scores[activePlayer] >= 100){
         renderConfetti();
         applaud();
         document.getElementById(`player-heading-${activePlayer}`).classList.add('player-active-win');
